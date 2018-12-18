@@ -32,7 +32,7 @@ Last, run the application.
 yarn run start
 ```
 
-## Production / From the Server
+### Production / From the Server
 
 First build the application and serve it.
 
