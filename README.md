@@ -23,7 +23,7 @@ cd reason-react-ssr-starter
 Then install dependencies.
 
 ```shell
-yarn instal
+yarn install
 ```
 
 Last, run the application.
