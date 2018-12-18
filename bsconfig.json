@@ -9,7 +9,7 @@
   // How to output the files
   "package-specs": [
     {
-      "module": "es6-global",
+      "module": "commonjs",
       "in-source": false
     }
   ],

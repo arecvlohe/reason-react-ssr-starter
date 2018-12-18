@@ -4,13 +4,13 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   // The file that is the main point of access for the SPA
-  entry: path.join(__dirname, "src/client.js"),
+  entry: path.join(__dirname, "../src/client.js"),
   // Where you want to output the file
   output: {
     // The output file's name
     filename: "bundle.js",
     // Where the output JavaScript bundle will go
-    path: path.join(__dirname, "build")
+    path: path.join(__dirname, "../dist")
   },
   // The mode to determine what optimizations to make
   mode: "development",
@@ -45,11 +45,11 @@ module.exports = {
   },
   plugins: [
     // Plugin to clean the build folder on every build
-    new CleanWebpackPlugin(["build"]),
+    new CleanWebpackPlugin(["../dist"]),
     // Plugin to create the index.html file and inject the script which
     // points to the JavaScript bundle
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src/index.html"),
+      template: path.join(__dirname, "../src/index.html"),
       filename: "index.html"
     })
   ],

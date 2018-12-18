@@ -1,22 +1,30 @@
 {
-  "name": "reason-react-starter",
+  "name": "reason-react-ssr-starter",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "concurrently \"npm run js-watch\" \"npm run bsb-watch\"",
-    "js-watch": "webpack-dev-server --hot --inline",
-    "bsb-watch": "bsb -make-world -w"
+    "build": "npm run bsb-clean && npm run bsb-build && npm run js-build",
+    "serve": "node src/server.js",
+    "js-watch": "webpack-dev-server --hot --inline --config webpack/webpack.config.dev.js",
+    "js-build": "webpack --config webpack/webpack.config.prod.js",
+    "bsb-watch": "bsb -make-world -w",
+    "bsb-build": "bsb -make-world",
+    "bsb-clean": "bsb -clean-world"
   },
   "dependencies": {
-    "bs-css": "^7.2.0",
+    "bs-css": "^8.0.0-beta.2",
+    "emotion": "^10.0.5",
+    "emotion-server": "^10.0.5",
+    "express": "^4.16.4",
     "normalize.css": "^8.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "reason-react": "^0.5.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.0",
+    "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
@@ -26,9 +34,13 @@
     "css-loader": "^1.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "style-loader": "^0.23.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.9",
+    "webpack-manifest-plugin": "^2.0.4"
   }
 }
