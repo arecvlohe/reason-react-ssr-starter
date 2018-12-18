@@ -42,8 +42,5 @@ module.exports = {
   ],
   optimization: {
     minimizer: [new UglifyJsPlugin(), new OptimizeCSSAssetsPlugin()]
-  },
-  stats: {
-    assets: true
   }
 };
