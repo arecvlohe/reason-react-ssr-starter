@@ -4,8 +4,9 @@ const ReactDOMServer = require("react-dom/server");
 const emotionServer = require("emotion-server");
 const path = require("path");
 
-const App = require("../lib/js/src/App").default;
+const { make } = require("../lib/js/src/App");
 const asset = require("../dist/manifest.json");
+const App = make;
 
 const server = express();
 

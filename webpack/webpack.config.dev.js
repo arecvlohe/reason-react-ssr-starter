@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   // The file that is the main point of access for the SPA
@@ -45,7 +45,7 @@ module.exports = {
   },
   plugins: [
     // Plugin to clean the build folder on every build
-    new CleanWebpackPlugin(["../dist"]),
+    new CleanWebpackPlugin(),
     // Plugin to create the index.html file and inject the script which
     // points to the JavaScript bundle
     new HtmlWebpackPlugin({

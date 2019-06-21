@@ -22,24 +22,16 @@ module Styles = {
   let content = style([color(hex("222"))]);
 };
 
-/* Name the component */
-let component = ReasonReact.statelessComponent("App");
-
 /* Make the component */
 let make = _children => {
-  ...component,
-  render: _self =>
-    <div className=Styles.container>
-      <div className=Styles.card>
-        <h1 className={Styles.header("222")}>
-          "Reason React!"->ReasonReact.string
-        </h1>
-        <p className=Styles.content>
-          {j|Type safe styles in Reason React FTW! 😎|j}->ReasonReact.string
-        </p>
-      </div>
-    </div>,
+  <div className=Styles.container>
+    <div className=Styles.card>
+      <h1 className={Styles.header("222")}>
+        "Reason React!"->ReasonReact.string
+      </h1>
+      <p className=Styles.content>
+        {j|Type safe styles in Reason React FTW! 😎|j}->ReasonReact.string
+      </p>
+    </div>
+  </div>;
 };
-
-/* Wrap it for JavaScript so it can be imported and used inside of client.js */
-let default = ReasonReact.wrapReasonForJs(~component, _jsProps => make([||]));
