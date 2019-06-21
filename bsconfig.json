@@ -3,7 +3,7 @@
   // The syntax version for reason
   "refmt": 3,
   // The reason jsx syntax
-  "reason": { "react-jsx": 2 },
+  "reason": { "react-jsx": 3 },
   // The folder to look in to find reason files
   "sources": ["src"],
   // How to output the files
