@@ -24,7 +24,7 @@ server
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ReasonReact SSR Starter</title>
-        <link ref="stylesheet" href="/assets/${asset["main.css"]}">
+        <link rel="stylesheet" href="/assets/${asset["main.css"]}">
         <script src="/assets/${asset["main.js"]}" defer></script>
         <body>
           <div id="root">${html}</div>
