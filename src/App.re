@@ -10,11 +10,13 @@ module Styles = {
       border(px(1), solid, hex("eee")),
       borderRadius(px(3)),
       boxShadow(
-        ~x=px(0),
-        ~y=px(0),
-        ~blur=px(2),
-        ~spread=px(2),
-        hex("eee"),
+        Shadow.box(
+          ~x=px(0),
+          ~y=px(0),
+          ~blur=px(2),
+          ~spread=px(2),
+          hex("eee"),
+        ),
       ),
     ]);
 
