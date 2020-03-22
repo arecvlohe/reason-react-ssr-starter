@@ -14,5 +14,5 @@
     }
   ],
   // What bs dependencies there are which BuckleScript needs to compile ahead of time
-  "bs-dependencies": ["reason-react", "bs-css"]
+  "bs-dependencies": ["reason-react", "bs-css", "bs-css-emotion"]
 }

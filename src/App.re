@@ -1,6 +1,6 @@
 module Styles = {
   open Css;
-  let container = style([padding(px(20)), fontFamily("sans-serif")]);
+  let container = style([padding(px(20)), fontFamily(`custom("sans-serif"))]);
   let card =
     style([
       maxWidth(px(500)),
